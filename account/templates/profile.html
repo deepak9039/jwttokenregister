@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>profile page</h1>
+    <label for="">Email</label>
+    <p><input type="text" value="{{user.username}}"></p>
+    <label for="">First Name</label>
+    <P><input type="text" value="{{user.profile.first_name}}"></P>
+    <label for="">Last Name</label>
+    <p><input type="text" value="{{user.profile.last_name}}"></p>
+    <label for="">Phone Number</label>
+    <p><input type="text" value="{{user.profile.phone_number}}"></p>
+    <label for="">Address</label>
+    <p><textarea rows="10" cols="40">{{user.profile.address}}</textarea></p>
+</body>
+</html>

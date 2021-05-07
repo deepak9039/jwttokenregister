@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abcd(){
+      var email = document.getElementsByName("email")[0].value;
+      var password = document.getElementsByName("password")[0].value;
+            console.log(email,password);
+            
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST","/account/login",true)  
+            xhr.setRequestHeader("content-type","application/json")
+            //xhr.setRequestHeader("Authorization","Token 45d9e83dbc53351c6acbe09740dd5679e39cb29b")
+            
+              xhr.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status==200){
+                  var data = JSON.parse(xhr.responseText)
+                  console.log(data);
+                  window.location = '/account/profile/'+data.user
+                }
+                
+              }
+            xhr.send(JSON.stringify({
+              email,
+              password
+            }))
+        }
+    </script>
+</head>
+<body>
+    <p> <input type="text" name="email" placeholder="email"> </p>
+    <p></p><input type="text" name="password" placeholder="password"></p>
+
+    <p><button type="button" onclick="abcd()">login</button></p>
+</body>
+
+</html>
