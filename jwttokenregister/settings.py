@@ -25,7 +25,7 @@ SECRET_KEY = '625x)u-)mww)2bqz9+(!_#sszk&ew^f=pk)+##xgb)n59g6r5w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['jwttokenregister.herokuapp.com','*']
+ALLOWED_HOSTS = ['jwttokenregister.herokuapp.com/','*']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
